@@ -31,6 +31,12 @@ function Line(){
   this.dom.className='lines';
 }
 ```
+JS中线段长度应有：![公式1](/pic/公式1.png)；
+
+与极轴（水平轴）的夹角为：![公式2](/pic/公式2.png)；
+
+线段中点的坐标应为：![公式3](/pic/公式3.png)；
+
 CSS部分：
 ```css
 .lines{
@@ -56,6 +62,6 @@ CSS部分：
 	font-weight: bold;
 }
 ```
-说明：JS中所有单位均为像素(px)。
+
 
     
