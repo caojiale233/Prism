@@ -83,7 +83,10 @@ CSS部分中除了.lines类的通用样式，还有一个.line_arrow类，该类
 ### 三棱镜折射问题中的两个关键点
 
 棱镜旋转θ角时，光路与棱镜边界的第一个交点：
+
 ![公式5](https://caojiale233.github.io/Prism/img/公式5.jpg)；
 
+
 第二个交点：
+
 ![公式6](https://caojiale233.github.io/Prism/img/公式6.jpg)；
