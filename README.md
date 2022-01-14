@@ -3,8 +3,8 @@
 
 ## 仿真原理
 三棱镜的折射现象，可以由电磁场的边值关系解释，边值关系在几何光学中的体现即为折射定律，因此仿真的关键点在于把握角度的变化以及光线-棱镜交点的坐标。
-前端中实现指定长度、指定角度、指定位置的线条，可以生成一个无意义的块元素div来实现，线段长度可以用样式"width:length;"指定，
-角度、位置可通过"transform:rotate(angle) translate(x,y);"设置。
+前端中实现指定长度、指定角度、指定位置的线条，可以生成一个无意义的块元素div来实现，线段长度可以用样式“width:length;”指定，
+角度、位置可通过“transform:rotate(angle) translate(x,y);”设置。
 在网页中，仅需设置线段两端点的极坐标即生成一条任意线段，在完成线段生成的逻辑后，三棱镜折射的问题就成为了一个“简单的”几何题。
 构建整个系统在棱镜旋转θ度后的状态，即可动态观察三棱镜入射角与出射角的关系，能观察到的物理现象有最小偏向角和全反射。
 除了对三棱镜仿真，代码中的许多片段也能分离出来作为一个模块单独使用。
@@ -35,7 +35,13 @@ JS中线段长度应有：![公式1](https://caojiale233.github.io/Prism/img/公
 
 与极轴（水平轴）的夹角为：![公式2](https://caojiale233.github.io/Prism/img/公式2.jpg)；
 
+css中的rotate为顺时针旋转，故应用时需添加一个“-”号。
+
 线段中点的坐标应为：![公式3](https://caojiale233.github.io/Prism/img/公式3.jpg)；
+
+水平方向应修正l/2，垂直方向还需修正一半的线宽，此处为1px。
+
+Line对象中AC方法是appendChild的缩写，可以将线条插入到不同元素中，与html布局配合可以实不同原点的极坐标系。
 
 CSS部分：
 ```css
@@ -58,10 +64,8 @@ CSS部分：
 	line-height:2px;
 	font-size:15px;
 	text-align:center;
-	font-family: cursive;
 	font-weight: bold;
 }
 ```
+CSS部分中除了.lines类的通用样式，还有一个.line_arrow类，该类为线段提供了一个箭头用于指向，此处需要将line-height设置到与线宽相同，才能实现箭头居中；font-size定义了箭头的大小。
 
-
-    
