@@ -31,11 +31,11 @@ function Line(){
   this.dom.className='lines';
 }
 ```
-JS中线段长度应有：![公式1](/img/公式1.jpg)；
+JS中线段长度应有：![公式1](https://caojiale233.github.io/Prism/img/公式1.jpg)；
 
-与极轴（水平轴）的夹角为：![公式2](/img/公式2.jpg)；
+与极轴（水平轴）的夹角为：![公式2](https://caojiale233.github.io/Prism/img/公式2.jpg)；
 
-线段中点的坐标应为：![公式3](/img/公式3.jpg)；
+线段中点的坐标应为：![公式3](https://caojiale233.github.io/Prism/img/公式3.jpg)；
 
 CSS部分：
 ```css
